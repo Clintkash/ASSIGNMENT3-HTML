@@ -1,0 +1,157 @@
+	<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Event Tickets Order Form</title>
+		<link rel="stylesheet" type="text/css" href="styles/normalize.css">
+		<link rel="stylesheet" type="text/css" href="styles/main.css">		
+	</head>
+
+	<body>
+		<div id="frame">
+			<header>
+				<img src="images/ornament-logo.png" alt="New Year Central Logo" style="width: 400px;">
+				<div id="header-line-1">New Year Central</div>
+				<div id="header-line-2">For the child in all of us!</div>
+			</header>
+
+			<!-- navigation starts -->
+			<nav id="nav_menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about_us.html">About Us</a></li>
+					<li><a href="products.html">Our Products</a></li>
+					<li><a href="tickets_order_form.html" class="current">Event Tickets</a></li>
+					<li><a href="contact_us.html">Contact Us</a></li>
+				</ul>
+			</nav>
+
+			<aside>
+				<div class="sidebar-title">Products of The Week...</div>
+				<ul>
+					<li><a href="assets/products/berry-garland.html">Natural Holly Berry Garland, 5f - $74.99</a></li>
+					<li><a href="assets/products/artificial-red-berry-garland.html">Artificial Red Berry and White Edge Holly Leaf Christmas Garland, 5.5f - $38.99</a></li>
+					<li><a href="assets/products/christmas-berries-stems.html">Christmas Berries Red Stems Evergreen Pine Branches, 8pcs - $15.99</a></li>
+				</ul>
+			</aside>
+			
+			<main>
+				<h1>Order Event Tickets</h1>
+				<!-- The form starts here... 
+				Member INFORMATION-->
+				<form name="Emailform" id= "Emailform" method="post" action="subscribe.php">
+
+					<fieldset id="fieldset1">
+						<legend id="len1"><strong>Member Information</strong></legend>
+						<label for="email">Email:</label>
+						<input type="text" name='Email' id="email" valid> <br>
+						<label for="Firstname">First name:</label>
+						<input type="text" name='Firstname' required><br>
+						<label for="lastname">Last name:</label> 
+						<input type="text" name='lastname' required><br>
+						<label for="Address">Address:</label> 
+						<input type="text" name='Address' id="Address"><br>
+						<label for="city">City:</label> 
+						<input type="text" name='City' required><br>
+						<label for="Provience">Provience:</label> 
+						<input type="text" name='Provience' required pattern="[A-Za-z0-9]{2}" title="2-Character-code" placeholder="2-Character code"> <br>
+						<label for="postal code">Postal Code:</label> 
+						<input type="text" name="Postal code" required pattern="[A-Za-z0-9]{6}" title="6 Character" placeholder="6 Characters"> <br>
+						<label for="phone">Phone number:</label>
+						<input type="text" name="tel" id="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="999-999-9999" placeholder="999-999-9999"> <br>
+						
+
+	
+					</fieldset><br>
+<!--Ordering info-->
+					<fieldset id="fieldset2">
+						<legend><strong>Ordering Information</strong></legend>
+						<label for="Event">Event:</label>
+						<select name="Events" id="Events">
+							<option value="CDC">Cookie Decoration Contest</option>
+							<option value="TDC">Tree Decoration Contest</option>
+							<option value="GLRA">Gift of the Light Ride-Along</option>
+							<option value="BS">Breakfast with Santa</option> 
+						</select> <br>
+
+						</select name= "Ordertype" id="Order type">
+						<label for="ordertype">Order type:</label>
+						<select name="ordertype">
+							<option value="member package">Member Package</option>
+							<option value="Donor Package">Donor Package</option>
+							<option value="SingleTickets">Single tickets</option>
+						</select> <br>
+
+						<label for="number of tickets">Number of tickets:</label>
+						<input type="text" name="number of tickets" id="number of tickets" placeholder="Number of Single tickets">
+					
+					</fieldset> <br>
+<!-- RADIO.(paymet method) FOR THE RADIO TO BE IN THE SAME GROUP I GAVE THEM SAME NAME. -->
+					<fieldset id="f3">
+						<legend><strong>Payment Method</strong></legend>
+						<div id="radio">
+							<input type="radio"id="BM" name="bill" value="Bill Me"> 
+						<label for="" id="RADIO">Bill Me</label>
+
+						<input type="radio" id="CC" name="bill" value="Credit Card">
+						<label for=""  id="RADIO">Credit Card</label>
+						</div>
+					</fieldset> <br>
+
+<!--credit card information-->
+					<fieldset id="f4">
+						<legend><strong>Credit Card Information</strong></legend>
+						<label for="Cardtype">Card type:</label>
+						<select name="Card type" id="card">
+							<option value="Visa">Visa</option>
+							<option value="Master card">Master Card</option>
+							<option value="Discover"> Discover</option>
+						</select><br>
+						<label for="Cardnumber">Card number:</label>
+						<input type="text" pattern="[0-9]{16}" placeholder="16 digits" title="16 digits" required><br>
+						
+						<label for="date">Expiration Date:</label>
+						<select name="date" id="month">
+						<option value="January">January</option>
+						<option value="Febuary">Febuary</option>
+						<option value="March">March</option>
+						<option value="April">April</option>
+						<option value="May">May</option>
+						<option value="June">June</option>
+						<option value="July">July</option>
+						<option value="August">August</option>
+						<option value="September">September</option>
+						<option value="October">October</option>
+						<option value="November">November</option>
+						<option value="December">December</option>
+					
+						</select>
+
+						<select name="date" id="year">
+							<option value="2021">2021</option>
+							<option value="2022">2022</option>
+							<option value="2023">2023</option>
+							<option value="2024">2024</option>
+							<option value="2025">2025</option>
+							<option value="2026">2026</option>
+							<option value="2027">2027</option>
+						</select>
+
+					</fieldset><br>
+<!--Submit and reset option-->
+					<fieldset id="f5">
+						<legend><strong>Submit Your Order</strong></legend>
+						<input type="submit" name= "Submit" id="submit"> 
+						<input type="reset" name= "reset" id="reset"> <br>
+					</fieldset>
+				</form>
+
+				
+			</main>
+			
+			<footer>
+				<p>&copy; 2021 New Year Central. Created by Clinton Okereke.</p>
+			</footer>
+		</div>
+	</body>
+</html>
